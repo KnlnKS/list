@@ -135,7 +135,7 @@ func (l *List[Value]) move(e, at *Element[Value]) {
 // Remove removes e from l if e is an element of list l.
 // It returns the element value e.Value.
 // The element must not be nil.
-func (l *List[Value]) Remove(e *Element[Value]) any {
+func (l *List[Value]) Remove(e *Element[Value]) Value {
 	if e.list == l {
 		// if e.list == l, l must have been initialized when e was inserted
 		// in l or l == nil (e is a zero Element) and l.remove will crash
