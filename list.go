@@ -59,11 +59,15 @@ func (l *List[Value]) Init() *List[Value] {
 }
 
 // New returns an initialized list.
-func New[Value any]() *List[Value] { return new(List[Value]).Init() }
+func New[Value any]() *List[Value] {
+	return new(List[Value]).Init()
+}
 
 // Len returns the number of elements of list l.
 // The complexity is O(1).
-func (l *List[Value]) Len() int { return l.len }
+func (l *List[Value]) Len() int {
+	return l.len
+}
 
 // Front returns the first element of list l or nil if the list is empty.
 func (l *List[Value]) Front() *Element[Value] {
